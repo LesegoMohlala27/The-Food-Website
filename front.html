@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Kingdom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h3>ALL WE CAN EAT KINGDOM</h3>
+
+    <div id="main">
+        <nav>
+            <ul>
+                <a href="#">Home</a>
+                <a href="#">Order</a>
+                <a href="#">Near</a>
+                <a href="#">About</a>
+            </ul>
+            <div class="searchBar">
+                <input placeholder="Search..." id="searchInput" name="search" type="text">
+                <button id="searchBtn">Search</button>
+                <div id="searchResults">
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+
+    <section class="items" id="itemsSection">
+
+        <div id="spaghetti" class="item">
+            <img src="images/0022b9ae4cff08e1cdfd6eecc739107a.jpg" alt="">
+            <h4>Spaghetti Carbonara</h4>
+            <button id="recipeButton" onclick="handleBtn()">View Recipe</button>
+          
+            <p id="output"></p>
+        </div>
+        <div id="beef" class="item">
+            <img src="images/35841504684aaff7034041f6f08748b3.jpg" alt="">
+            <h4>Beef Turkey</h4>
+            <button id="recipeButton" onclick="displayBtn()">View Recipe</button>
+            
+            <p id="display"></p>
+        </div>
+        <div id="beefStew" class="item">
+            <img src="images/63608b9cb23d183d94d14eb8c6515375.jpg" alt="">
+            <h4>Beef Stew</h4>
+            <button id="recipeButton" onclick="myButton()">View Recipe</button>
+           
+            <p id="show"></p>
+        </div>
+        <div id="stew" class="item">
+            <img src="images/77611de409796b3a7756d7ccdc0f0996.jpg" alt="">
+            <h4>Stew</h4>
+            <button id="recipeButton" onclick="myBtn()">View Recipe</button>
+         
+            <p id="view"></p>
+        </div>
+        <div id="chickenCurry" class="item">
+            <img src="images/c156967c09b6734fcd9a79f5b9230dd0.jpg" alt="">
+            <h4>Chicken Curry</h4>
+            <button id="recipeButton" onclick="Button()">View Recipe</button>
+            
+            <p id="outputs"></p>
+        </div>
+        <div id="salad" class="item">
+            <img src="images/b360aefcded25044c9f367c78aea4b07.jpg" alt="">
+            <h4>Salad</h4>
+            <button id="recipeButton" onclick="sButton()">View Recipe</button>
+          
+            <p id="shows"></p>
+        </div>
+
+    <div class="item" >
+        <button id="printButton" onclick="handleBtn()">Print Recipes</button>
+    </div>
+    </section>
+
+   
+    <script>
+        
+        const ingredients = document.querySelectorAll('.ingredient');
+        ingredients.forEach((ingredient) => {
+            ingredient.addEventListener('click', () => {
+                ingredient.classList.toggle('purchased');
+            });
+        });
+
+        // JavaScript to handle printing the recipe
+        const printButton = document.getElementById('printButton');
+        printButton.addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+    <section class="foot">
+        <footer id="footer">
+            <h3>Follow us on</h3>
+            <img src="images/facebook-logo-facebook-icon-transparent-free-png.webp" alt="">
+            <img src="images/instagram icon.png" alt="">
+            <img src="images/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.webp" alt="">
+            <img src="images/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.webp" alt="">
+            <p>@AllWeCanEatKingdom</p>
+        </footer>
+    </section>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
